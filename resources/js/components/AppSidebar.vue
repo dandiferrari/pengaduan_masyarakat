@@ -123,13 +123,13 @@ function toggleMenu(menu) {
     </SidebarHeader>
     <SidebarContent>
       <!-- Admin Sekolah Role -->
-      <NavProjects v-if="user.jabatan_user === 'admin'" :projects="data.projects" />
-      <NavMain v-if="user.jabatan_user === 'admin'" :items="data.navMain" />
+      <NavProjects :projects="data.projects" />
+      <NavMain :items="data.navMain" />
 
       <!-- Bendahara user.jabatan_user -->
-      <NavProjects v-if="user.jabatan_user === 'bendahara'" :projects="data.projects" />
-      <div v-if="user.jabatan_user === 'bendahara'">
-        <NavMain v-if="user.jabatan_user === 'bendahara'" :items="data.navMainBendahara" />
+      <NavProjects :projects="data.projects" />
+      <div>
+        <NavMain :items="data.navMainBendahara" />
       </div>
 
       <!-- Kepala Sekolah user.jabatan_user -->
